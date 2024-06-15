@@ -82,6 +82,7 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 10%;
   text-align: center;
+  border:black solid;
 }
 
 .q-btn {

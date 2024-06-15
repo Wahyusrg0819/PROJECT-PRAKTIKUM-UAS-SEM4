@@ -34,6 +34,7 @@ export default {
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    border:black solid;
  }
 </style>
   
