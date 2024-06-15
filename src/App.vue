@@ -22,12 +22,25 @@ export default {
 body {
   width: 100%;
   height: 100%;
-  --color1: rgb(108, 231, 221);
-  --color2: rgb(250, 255, 178);
-  background-color: var(--color1);
-  background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)), 
-                    linear-gradient(45deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
+  --s: 50px; /* control the size */
+  --t: 6px; /* control the thickness */
+  --c1: #084c7f;
+  --c2: #fef5e9;
+
+  --_c: #0000 calc(98% - var(--t)), var(--c1) calc(100% - var(--t)) 98%, #0000;
+  --_s: calc(2 * var(--s)) calc(5 * var(--s) / 2);
+  --_r0: /var(--_s) radial-gradient(calc(var(--s) / 2) at 0 20%, var(--_c));
+  --_r1: /var(--_s) radial-gradient(calc(var(--s) / 2) at 100% 20%, var(--_c));
+  background: 0 0 var(--_r0),
+    calc(-1 * var(--s)) calc(5 * var(--s) / 4) var(--_r0), var(--s) 0 var(--_r1),
+    0 calc(5 * var(--s) / 4) var(--_r1),
+    conic-gradient(at var(--t) calc(20% + 2 * var(--t)), #0000 75%, var(--c1) 0)
+      calc(var(--t) / -2) calc(var(--s) - var(--t)) / var(--s)
+      calc(5 * var(--s) / 4),
+    repeating-conic-gradient(var(--c2) 0 25%, #0000 0 50%) var(--s)
+      calc(var(--s) / -8) / var(--_s),
+    conic-gradient(from 90deg at var(--t) var(--t), var(--c2) 25%, var(--c1) 0)
+      calc((var(--s) - var(--t)) / 2) calc((var(--s) - var(--t)) / 2) / var(--s)
+      calc(5 * var(--s) / 4);
 }
 </style>
