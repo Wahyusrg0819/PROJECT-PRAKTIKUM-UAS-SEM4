@@ -27,12 +27,12 @@ export default {
   margin: 20px auto;
   padding: 20px;
   background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
   margin-top: 10%;
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    border:black solid;
+    border:black solid; border-radius: 15px;
  }
 </style>
   

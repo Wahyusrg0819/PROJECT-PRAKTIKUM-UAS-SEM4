@@ -79,7 +79,7 @@ export default {
   margin: 20px auto;
   padding: 20px;
   background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
   margin-top: 10%;
   text-align: center;
   border:black solid;
